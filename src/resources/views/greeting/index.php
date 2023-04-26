@@ -6,6 +6,13 @@
     </head>
     <body>
         <h1>Greeting</h1>
+        <?php
+        if ($errors->any()){
+            foreach($errors->all() as $error){
+                echo '<p style="color:red">'.e($error).'</p>';
+            }
+        }
+        ?>
         <form action="/greeting/welcome" method="post">
             <?php echo e(csrf_field()); ?>
             <input type="text" name="username">
