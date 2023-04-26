@@ -23,3 +23,4 @@ Route::get('/hello', [HelloController::class, 'index']);
 Route::get('/greeting',[GreetingController::class, 'index']);
 Route::get('/greeting/welcome',[GreetingController::class, 'welcome']);
 Route::post('/greeting/welcome',[GreetingController::class, 'welcome']);
+Route::get('/greeting/hello',[GreetingController::class, 'hello']);
