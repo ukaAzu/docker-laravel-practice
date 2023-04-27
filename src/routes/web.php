@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\GreetingController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('/greeting',[GreetingController::class, 'index']);
 Route::get('/greeting/welcome',[GreetingController::class, 'welcome']);
 Route::post('/greeting/welcome',[GreetingController::class, 'welcome']);
 Route::get('/greeting/hello',[GreetingController::class, 'hello']);
+
+Route::get('/profile',[ProfileController::class, 'index']);
