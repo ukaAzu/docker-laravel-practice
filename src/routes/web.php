@@ -27,3 +27,5 @@ Route::post('/greeting/welcome',[GreetingController::class, 'welcome']);
 Route::get('/greeting/hello',[GreetingController::class, 'hello']);
 
 Route::get('/profile',[ProfileController::class, 'index']);
+Route::get('/profile/confirm',[ProfileController::class, 'confirm']);
+Route::post('/profile/confirm',[ProfileController::class, 'confirm']);

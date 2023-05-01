@@ -15,5 +15,6 @@ class ProfileController extends Controller
     public function confirm(ProfileRequest $request)
     {
         $data = $request->all();
+        return view('profile.confirm',['data' => $data]);
     }
 }
