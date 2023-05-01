@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\GreetingController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get('/greeting/hello',[GreetingController::class, 'hello']);
 Route::get('/profile',[ProfileController::class, 'index']);
 Route::get('/profile/confirm',[ProfileController::class, 'confirm']);
 Route::post('/profile/confirm',[ProfileController::class, 'confirm']);
+
+Route::get('/lot',[LotController::class, 'index']);
