@@ -5,6 +5,7 @@ use App\Http\Controllers\HelloController;
 use App\Http\Controllers\GreetingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LotController;
+use App\Http\Controllers\EmployeesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,7 @@ Route::get('/profile/confirm',[ProfileController::class, 'confirm']);
 Route::post('/profile/confirm',[ProfileController::class, 'confirm']);
 
 Route::get('/lot',[LotController::class, 'index']);
+
+Route::get('/employees',[EmployeesController::class, 'index']);
+Route::get('/employees/create',[EmployeesController::class, 'create']);
+Route::post('/employees/store',[EmployeesController::class, 'store']);
