@@ -42,4 +42,4 @@ Route::get('/employees/search',[EmployeesController::class, 'search']);
 
 Route::get('/work_reports',[WorkReportsController::class, 'index']);
 Route::get('/work_reports/create',[WorkReportsController::class, 'create']);
-ROute::get('work_reports/store',[WorkReportsController::class, 'store']);
+Route::post('/work_reports/store',[WorkReportsController::class, 'create']);
