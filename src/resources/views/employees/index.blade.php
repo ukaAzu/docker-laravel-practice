@@ -24,7 +24,7 @@
                 <td>{{ $employee->employee_name }}</td>
                 <td>{{ $employee->section }}</td>
                 <td>{{ $employee->salary }}</td>
-                <td><a href="/employee/detail{{ $employee->id }}">詳細</a></td>
+                <td><a href={{ route('employees.detail', $employee->id) }}>詳細</a></td>
             </tr>
             @endforeach
         </table>

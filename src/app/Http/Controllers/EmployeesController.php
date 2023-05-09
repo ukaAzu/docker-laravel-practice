@@ -47,6 +47,6 @@ class EmployeesController extends Controller
 
     public function detail($id)
     {
-        return view('employees.detail', $id);
+        return view('employees.detail', ['id' => $id]);
     }
 }
