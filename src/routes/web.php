@@ -39,7 +39,8 @@ Route::get('/employees',[EmployeesController::class, 'index']);
 Route::get('/employees/create',[EmployeesController::class, 'create']);
 Route::post('/employees/store',[EmployeesController::class, 'store']);
 Route::get('/employees/search',[EmployeesController::class, 'search']);
+Route::get('/employees/detail',[EmployeesController::class, 'detail']);
 
 Route::get('/work_reports',[WorkReportsController::class, 'index']);
 Route::get('/work_reports/create',[WorkReportsController::class, 'create']);
-Route::post('/work_reports/store',[WorkReportsController::class, 'create']);
+Route::post('/work_reports/store',[WorkReportsController::class, 'store']);

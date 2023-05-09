@@ -11,7 +11,8 @@ class EmployeesController extends Controller
     public function index()
     {
         // $employees = DB::table('employees')->get();
-        $employees = Employee::all();
+        // $employees = Employee::all();
+        $employees = Employee::orderBy('id', 'asc')->get();
         return view('employees.index',['employees' => $employees]);
     }
 
@@ -42,5 +43,10 @@ class EmployeesController extends Controller
         $search_word = $request->input('employee_name_like');
         $employees = Employee::where('employee_name','LIKE',"%{$search_word}%")->get();
         return view('employees.index',['employees' => $employees]);
+    }
+
+    public function detail($id)
+    {
+        return view('employees.detail', $id);
     }
 }
