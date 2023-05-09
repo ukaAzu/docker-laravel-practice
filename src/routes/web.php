@@ -6,6 +6,7 @@ use App\Http\Controllers\GreetingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\LotController;
 use App\Http\Controllers\EmployeesController;
+use App\Http\Controllers\WorkReportsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,7 @@ Route::get('/employees',[EmployeesController::class, 'index']);
 Route::get('/employees/create',[EmployeesController::class, 'create']);
 Route::post('/employees/store',[EmployeesController::class, 'store']);
 Route::get('/employees/search',[EmployeesController::class, 'search']);
+
+Route::get('/work_reports',[WorkReportsController::class, 'index']);
+Route::get('/work_reports/create',[WorkReportsController::class, 'create']);
+ROute::get('work_reports/store',[WorkReportsController::class, 'store']);
