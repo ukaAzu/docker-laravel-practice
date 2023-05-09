@@ -37,3 +37,4 @@ Route::get('/lot',[LotController::class, 'index']);
 Route::get('/employees',[EmployeesController::class, 'index']);
 Route::get('/employees/create',[EmployeesController::class, 'create']);
 Route::post('/employees/store',[EmployeesController::class, 'store']);
+Route::get('/employees/search',[EmployeesController::class, 'search']);

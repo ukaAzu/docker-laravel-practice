@@ -36,4 +36,11 @@ class EmployeesController extends Controller
 
         return view('employees.store');
     }
+
+    public function search(Request $request)
+    {
+        $search_word = $request->input('employee_name_like');
+        $employees = Employee::where('employee_name','LIKE',"%{$search_word}%")->get();
+        return view('employees.index',['employees' => $employees]);
+    }
 }
