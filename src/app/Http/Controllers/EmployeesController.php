@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Employee;
+use App\Models\WorkReport;
 
 class EmployeesController extends Controller
 {
@@ -47,6 +48,10 @@ class EmployeesController extends Controller
 
     public function detail($id)
     {
-        return view('employees.detail', ['id' => $id]);
+        $employees = Employee::where('id', '=', $id)->get();
+        $work_reports = WorkReport::where('employee_id', '=', $id)
+            ->orderBy('id', 'asc')
+            ->get();
+        return view('employees.detail', compact('employees', 'work_reports'));
     }
 }
